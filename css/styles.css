@@ -11,8 +11,16 @@
     font-style: normal;
 }
 @font-face {
-    font-family: ;
-    src: url();
+    font-family: "CascadiaCode";
+    src: url(/css/fonts/Cascadia\ Code\ Regular\ 400.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Dosis-ExtraLight";
+    src: url(/css/fonts/Dosis-ExtraLight.ttf);
+    font-weight: 200;
+    font-style: normal;
 }
 
 :root{
@@ -22,22 +30,25 @@
     --color3-d-j: #AD577C;
     --color4-d-j: #000;
     --color5-d-j: #868686;
+    --color6-d-j: red;
 
     /*font-family*/
     --h1-d-j: "CascadiaCode-BoldItalic", sans-serif;
     --h2-d-j: "CascadiaCode-Bold", sans-serif;
-    --h3-d-j: ""
+    --h3-d-j: "CascadiaCode", sans-serif;
+    --h4-d-j: "Dosis-ExtraLight", sans-serif;
 
     /*font-size*/
-    --fonth1-d-j: 3.2rem;
-    --fonth2h4h5-d-j: 1.6rem;
-    --fonth3-d-j: 2rem;
-    --fonth6-d-j: 1.4rem;
-    --fontp-d-j: 1.5rem;
-    --fontSpanBanner-d-j: 3.4rem;
+    --sizeh1-d-j: 3.2rem;
+    --sizeh2h4h5-d-j: 1.6rem;
+    --sizeh3-d-j: 2rem;
+    --sizeh6-d-j: 1.4rem;
+    --sizep-d-j: 1.5rem;
+    --sizeSpanBanner-d-j: 3.4rem;
 
     /*font-weight*/
     --weightBold-d-j: 700;
+    --weightExtraLight-d-j: 200;
 
     /*font-style*/
     --styleItalic-d-j: italic;
@@ -49,4 +60,34 @@ html{
 }
 body{
     background-color: var(--color1-d-j);
+}
+h1{
+    text-align: center;
+}
+span{
+    font-size: var(--sizeSpanBanner-d-j);
+}
+h4{
+    font-size: var(--sizeh2h4h5-d-j);
+    font-weight: var(--weightBold-d-j);
+}
+header{
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    header{
+        text-align: left;
+    }
+}
+.borrar-curso{
+    background-color: var(--color6-d-j);
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: var(--color1-d-j);
+    font-weight: var(--weightBold-d-j);
+}
+ul{
+    
 }
