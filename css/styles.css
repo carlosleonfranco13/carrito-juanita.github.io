@@ -1,3 +1,52 @@
+@font-face {
+    font-family: "CascadiaCode-BoldItalic";
+    src: url(/css/fonts/CascadiaCode-BoldItalic.otf);
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "CascadiaCode-Bold";
+    src: url(/css/fonts/Cascadia\ Code\ Bold\ 700.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: ;
+    src: url();
+}
+
+:root{
+    /*Colors*/
+    --color1-d-j: #FAEE8A;
+    --color2-d-j: #A2ECFA;
+    --color3-d-j: #AD577C;
+    --color4-d-j: #000;
+    --color5-d-j: #868686;
+
+    /*font-family*/
+    --h1-d-j: "CascadiaCode-BoldItalic", sans-serif;
+    --h2-d-j: "CascadiaCode-Bold", sans-serif;
+    --h3-d-j: ""
+
+    /*font-size*/
+    --fonth1-d-j: 3.2rem;
+    --fonth2h4h5-d-j: 1.6rem;
+    --fonth3-d-j: 2rem;
+    --fonth6-d-j: 1.4rem;
+    --fontp-d-j: 1.5rem;
+    --fontSpanBanner-d-j: 3.4rem;
+
+    /*font-weight*/
+    --weightBold-d-j: 700;
+
+    /*font-style*/
+    --styleItalic-d-j: italic;
+    --stylenormal-d-j: normal;
+}
+
 html{
     font-size: 62.5%;
+}
+body{
+    background-color: var(--color1-d-j);
 }
