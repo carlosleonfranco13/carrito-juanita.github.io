@@ -6,13 +6,13 @@
 }
 @font-face {
     font-family: "CascadiaCode-Bold";
-    src: url(/css/fonts/Cascadia\ Code\ Bold\ 700.otf);
+    src: url(/css/fonts/CascadiaCodeBold700.otf);
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: "CascadiaCode";
-    src: url(/css/fonts/Cascadia\ Code\ Regular\ 400.otf);
+    src: url(/css/fonts/CascadiaCodePLRegular400.otf);
     font-weight: normal;
     font-style: normal;
 }
@@ -34,7 +34,7 @@
     --color7-d-j: #fff;
 
     /*font-family*/
-    --h1-d-j: "CascadiaCode-BoldItalic", sans-serif;
+    --h1-d-j: "CascadiaCode-BoldItalic";
     --h2-d-j: "CascadiaCode-Bold", sans-serif;
     --h3-d-j: "CascadiaCode", sans-serif;
     --h4-d-j: "Dosis-ExtraLight", sans-serif;
@@ -72,9 +72,6 @@ body{
     margin: 0 auto;
 }
 
-header{
-    border: 2px solid red;
-}
 header .container .row{
     display: flex;
     align-items: center;
@@ -142,3 +139,43 @@ header i{
     background-color: red;
 }
 
+#hero{
+    background-image: url(/assets/imgs/bg-banner-juanita.jpg);
+    height: 350px;
+    background-size: cover;
+    background-position: right;
+}
+#hero .container{
+    margin: 0 auto;
+    width: 80%;
+}
+.contenido-hero{
+    padding-top: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contenido-hero span{
+    font-size: var(--sizeSpanBanner-d-j);
+    font-family: var(--h1-d-j);
+    color: var(--color7-d-j);
+}
+.contenido-hero h3{
+    font-family: var(--h3-d-j);
+    color: var(--color7-d-j);
+    font-size: var(--h3-d-j);
+}
+.contenido-hero form{
+    position: relative;
+    background-color: var(--color7-d-j);
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: inset 2px 2px 10px var(--color1-d-j);
+}
+#buscador{
+    
+}
+form #submit-buscador{
+
+}
