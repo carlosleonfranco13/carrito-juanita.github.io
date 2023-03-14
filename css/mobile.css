@@ -1,0 +1,54 @@
+header{
+    width: 100%;
+}
+header img{
+    height: 30px;
+}
+header i{
+    font-size: 20px;
+}
+
+#hero{
+    height: 300px;
+    background-position: bottom;
+}
+.contenido-hero{
+    padding-top: 25px;
+    width: 88%;
+    margin: 12px;
+}
+.contenido-hero span{
+    font-size: 2.4rem;
+}
+.contenido-hero h3{
+    font-size: 1.8rem;
+}
+.contenido-hero form{
+    width: 100%;
+}
+
+.barra{
+    height: 220px;
+    display: flex;
+    justify-content: center;
+}
+.barra .row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 44px;
+}
+
+.container-cards{
+    display: flex;
+    overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  margin: 16px 8px;
+}
+#lista-cursos .row{
+    margin-bottom: 0;
+}
+.card{
+    margin-right: 16px;
+}

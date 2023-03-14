@@ -60,6 +60,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html{
@@ -216,10 +217,12 @@ header i{
     font-family: var(--h4-d-j);
 }
 
-#lista-cursos{
+#lista-cursos h1{
+    padding-top: 24px;
+}
+.container-cards{
     max-width: 1024px;
     margin: 0 auto;
-    margin: 24px auto;
 }
 #encabezado{
     text-align: center;
@@ -230,30 +233,25 @@ header i{
 }
 #lista-cursos .row{
     display: flex;
-    gap: 16px;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 24px;
 }
+
 #lista-cursos .card{
     display: flex;
-    width: 320px;
-    height: 500px;
     flex-direction: column;
+    width: 270px;
+    height: 380px;
     background-color: var(--color2-d-j);
     border-radius: 16px;
 }
-#lista-cursos .card1{
-    height: 90%;
-    background-image: url(/assets/imgs/mindfullnes-para-principiantes.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 16px 16px 0 0;
-}
-.info-card{
-    height: 100%;
-    padding: 16px;
+.card .info-card{
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    height: 60%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 16px;
 }
 .info-card h2{
     font-family: var(--h2-d-j);
@@ -263,4 +261,178 @@ header i{
 .info-card p{
     font-size: var(--sizep-d-j);
     font-family: var(--h3-d-j);
+}
+.info-card img{
+    height: 16px;
+    width: 70px;
+}
+.info-card .precios{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.info-card .precios p{
+    font-family: var(--h3-d-j);
+    font-size: var(--sizep-d-j);
+    text-decoration: line-through;
+
+}
+.info-card .precios span{
+    font-family: var(--h2-d-j);
+    font-size: var(--sizeh2h4h5-d-j);
+    font-weight: var(--weightBold-d-j);
+}
+.agregar-carrito{
+    background-color: var(--color3-d-j);
+    width: 90%;
+    padding: 12px;
+    text-align: center;
+    font-size: var(--sizep-d-j);
+    color: var(--color7-d-j);
+    font-family: var(--h3-d-j);
+    border-radius: 8px;
+    align-self: center;
+}
+.agregar-carrito:hover{
+    background-color: var(--color7-d-j);
+    color: var(--color3-d-j);
+    transition: all 0.3s;
+}
+
+.card .card1{
+    background-image: url(/assets/imgs/mindfullnes-para-principiantes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card2{
+    background-image: url(/assets/imgs/alimentacion-consciente.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card3{
+    background-image: url(/assets/imgs/gestion-del-estres.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card4{
+    background-image: url(/assets/imgs/yoga-salud.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card5{
+    background-image: url(/assets/imgs/nutricion-deportiva.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card6{
+    background-image: url(/assets/imgs/aromaterapia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card7{
+    background-image: url(/assets/imgs/nutricion-holist.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card8{
+    background-image: url(/assets/imgs/yoga-naturaleza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card9{
+    background-image: url(/assets/imgs/sonido-yoga.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card10{
+    background-image: url(/assets/imgs/Yoga-relax.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card11{
+    background-image: url(/assets/imgs/yoga-equili.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card .card12{
+    background-image: url(/assets/imgs/yoga-flexible.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+footer{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+footer .row{
+    background-color: var(--color3-d-j);
+    height: 4px;
+    display: flex;
+}
+.row #principal{
+    display: flex;
+    flex-direction: column;
+    margin: 24px;
+    font-size: var(--sizeh6-d-j);
+    font-family: var(--h3-d-j);
+    gap: 8px;
+}
+.row #secundaria{
+    display: flex;
+    flex-direction: column;
+    margin: 24px;
+    font-size: var(--sizeh6-d-j);
+    font-family: var(--h3-d-j);
+    gap: 8px;
+}
+.row .enlace{
+    color: var(--color3-d-j);
 }
