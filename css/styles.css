@@ -145,14 +145,13 @@ header i{
 
 #hero{
     background-image: url(/assets/imgs/bg-banner-juanita.jpg);
-    height: 350px;
+    height: 380px;
     background-size: cover;
     background-position: right;
 }
 #hero .container{
-    margin: 0 auto;
     max-width: 1024px;
-    margin: auto 24px;
+    margin: 0 auto;
 }
 .contenido-hero{
     padding-top: 50px;
@@ -189,7 +188,79 @@ header i{
     font-family: var(--h3-d-j);
     width: 100%;
 }
-form img{
-    height: 36px;
+
+.barra{
+    background-color: var(--color2-d-j);
+    height: 70px;
+}
+.barra .container{
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+}
+.barra .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.barra .icono{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    gap: 8px;
+}
+.barra h4{
+    font-size: var(--sizeh2h4h5-d-j);
+    font-family: var(--h4-d-j);
 }
 
+#lista-cursos{
+    max-width: 1024px;
+    margin: 0 auto;
+    margin: 24px auto;
+}
+#encabezado{
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: var(--h1-d-j);
+    color: var(--color3-d-j);
+    font-weight: var(--weightBold-d-j);
+}
+#lista-cursos .row{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+#lista-cursos .card{
+    display: flex;
+    width: 320px;
+    height: 500px;
+    flex-direction: column;
+    background-color: var(--color2-d-j);
+    border-radius: 16px;
+}
+#lista-cursos .card1{
+    height: 90%;
+    background-image: url(/assets/imgs/mindfullnes-para-principiantes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px 16px 0 0;
+}
+.info-card{
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.info-card h2{
+    font-family: var(--h2-d-j);
+    color: var(--color4-d-j);
+    font-size: var(--sizeh2h4h5-d-j);
+}
+.info-card p{
+    font-size: var(--sizep-d-j);
+    font-family: var(--h3-d-j);
+}
