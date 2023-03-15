@@ -15,7 +15,7 @@ function registrarEventListeners() {
 function agregarCurso(e) {
   e.preventDefault();
 
-  if (e.target.classList.contains("agregar-carrito")) {
+  if (e.target.classList.contains('agregar-carrito')) {
     const cursoSeleccionado = e.target.parentElement.parentElement;
     leerDatosCurso(cursoSeleccionado);
   }
@@ -28,14 +28,42 @@ function leerDatosCurso(curso) {
 
     // Crear un objeto con el contenido del curso actual
     const infoCurso = {
-        imagen: curso.querySelector('.card1'),
+        imagen: curso.querySelector('img').src,
         titulo: curso.querySelector('h2').textContent,
         precio: curso.querySelector('.precios span').textContent,
         id: curso.querySelector('a').getAttribute('data-id'),
+        cantidad: 1
     }
 
     // Agrega elementos al arreglo de carrito
     articulosCarrito = [...articulosCarrito, infoCurso];
 
     console.log(articulosCarrito);
+
+    carritoHTML();
+}
+
+// Muestra el carrito en el HTML
+function carritoHTML() {
+
+  // Limpiar el HTML
+  limpiarHTML();
+
+  // Recorre el carrito y genera el HTML
+  articulosCarrito.forEach( curso => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+      <td>
+        ${curso.titulo}
+      </td>
+    `;
+
+    // Agrega el HTML del carrito en el tbody
+    contenedorCarrito.appendChild(row);
+  });
+}
+
+// Elimina los cursos del tbody
+function limpiarHTML() {
+  contenedorCarrito.innerHTML = '';
 }
