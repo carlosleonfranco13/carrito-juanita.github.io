@@ -19,6 +19,7 @@ function agregarCurso(e) {
     leerDatosCurso(cursoSeleccionado);
   }
 }
+ 
 
 // Lee el contenido del HTML al que le dimos click y extrae la información del curso
 function leerDatosCurso(curso) {
@@ -26,7 +27,7 @@ function leerDatosCurso(curso) {
 
     // Crear un objeto con el contenido del curso actual
     const infoCurso = {
-        imagen: curso.querySelector('.card1'),
+        imagen: getComputedStyle(curso.querySelector('.card1')),
         titulo: curso.querySelector('h2').textContent,
         precio: curso.querySelector('.precios span').textContent,
         id: curso.querySelector('a').getAttribute('data-id'),
