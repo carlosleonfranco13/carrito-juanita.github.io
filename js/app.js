@@ -15,45 +15,58 @@ function registrarEventListeners() {
 function agregarCurso(e) {
   e.preventDefault();
 
-  if (e.target.classList.contains('agregar-carrito')) {
+  if (e.target.classList.contains("agregar-carrito")) {
     const cursoSeleccionado = e.target.parentElement.parentElement;
     leerDatosCurso(cursoSeleccionado);
   }
 }
- 
 
 // Lee el contenido del HTML al que le dimos click y extrae la información del curso
 function leerDatosCurso(curso) {
-    // console.log(curso);
+  // console.log(curso);
 
-    // Crear un objeto con el contenido del curso actual
-    const infoCurso = {
-        imagen: curso.querySelector('img').src,
-        titulo: curso.querySelector('h2').textContent,
-        precio: curso.querySelector('.precios span').textContent,
-        id: curso.querySelector('a').getAttribute('data-id'),
-        cantidad: 1
-    }
+  // Crear un objeto con el contenido del curso actual
+  const infoCurso = {
+    imagen: curso.querySelector("img").src,
+    titulo: curso.querySelector("h2").textContent,
+    precio: curso.querySelector(".precios span").textContent,
+    id: curso.querySelector("a").getAttribute("data-id"),
+    cantidad: 1,
+  };
 
-    // Agrega elementos al arreglo de carrito
+  // Revisa si un elemento ya existe en el carrito
+  const existe = articulosCarrito.some((curso) => curso.id === infoCurso.id);
+  if (existe) {
+    // Actualizamos la cantd.
+    const cursos = articulosCarrito.map( curso => {
+      if( curso.id === infoCurso.id ) {
+        curso.cantidad++;
+        return curso; // Retorna el objeto actualizado
+      } else {
+        return curso; // Retorna los objetos que no son los duplicados
+      }
+    } );
+    articulosCarrito = [...cursos];
+  } else {
+    // Agrega cursos al arreglo de carrito
     articulosCarrito = [...articulosCarrito, infoCurso];
+  }
 
-    console.log(articulosCarrito);
+  console.log(articulosCarrito);
 
-    carritoHTML();
+  carritoHTML();
 }
 
 // Muestra el carrito en el HTML
 function carritoHTML() {
-
   // Limpiar el HTML
   limpiarHTML();
 
   // Recorre el carrito y genera el HTML
-  articulosCarrito.forEach( curso => {
-      const { imagen, titulo, precio, cantidad, id } = curso;
-      const row = document.createElement('tr');
-      row.innerHTML = `
+  articulosCarrito.forEach((curso) => {
+    const { imagen, titulo, precio, cantidad, id } = curso;
+    const row = document.createElement("tr");
+    row.innerHTML = `
       <td> <img src="${imagen}" width="75"> </td>
       <td> ${titulo} </td>
       <td> ${precio} </td>
@@ -71,7 +84,7 @@ function limpiarHTML() {
   // Forma lenta
   // contenedorCarrito.innerHTML = '';
 
-  while(contenedorCarrito.firstChild) {
-    contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+  while (contenedorCarrito.firstChild) {
+    contenedorCarrito.removeChild(contenedorCarrito.firstChild);
   }
 }
