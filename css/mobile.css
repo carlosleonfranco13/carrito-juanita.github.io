@@ -16,12 +16,12 @@ header i{
     border: 2px solid var(--color7-d-j);
 }
 #lista-carrito{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 th,
 td{
     padding: 4px 4px;
-    text-align: right;
+    text-align: center;
     border-bottom: 1px solid rgb(220, 220, 220);
 }
 td{
@@ -29,6 +29,9 @@ td{
 }
 td img{
     width: 50px;
+}
+td .borrar-curso{
+    font-size: 1rem;
 }
 
 #hero{
