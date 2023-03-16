@@ -132,6 +132,7 @@ td{
     border-radius: 50%;
     padding: 4px 8px;
     color: var(--color3-d-j);
+    border: 2px solid var(--color7-d-j);
     font-weight: 900;
 }
 

@@ -8,6 +8,29 @@ header i{
     font-size: 20px;
 }
 
+.submenu:hover #carrito{
+    top: 130%;
+    right: 0px;
+    padding: 4px;
+    min-width: 200px;
+    border: 2px solid var(--color7-d-j);
+}
+#lista-carrito{
+    font-size: 1.2rem;
+}
+th,
+td{
+    padding: 4px 4px;
+    text-align: right;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+td{
+    font-family: var(--h4-d-j);
+}
+td img{
+    width: 50px;
+}
+
 #hero{
     height: 300px;
     background-position: bottom;
